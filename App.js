@@ -1,11 +1,18 @@
-import { NativeBaseProvider, Box, Text } from 'native-base';
+import { NativeBaseProvider } from "native-base";
+import Home from "./app/components/Home";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <Box flex={1} alignSelf='center' justifyContent='center'>
-        <Text fontSize='lg'>Expo with NativeBase</Text>
-      </Box>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </NativeBaseProvider>
   );
 }
