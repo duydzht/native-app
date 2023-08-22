@@ -4,8 +4,8 @@ import React from "react";
 const Home = () => {
   return (
     <View>
-      <Box flex={1} alignSelf="center" justifyContent="center">
-        <Text fontSize="lg">Expo with NativeBase</Text>
+      <Box display={"flex"} alignSelf="center" justifyContent="center">
+        <Text fontSize="lg" paddingTop={"20px"} fontWeight={700}>Expo with NativeBase</Text>
       </Box>
     </View>
   );
